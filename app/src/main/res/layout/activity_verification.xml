@@ -5,37 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    android:textAlignment="center"
-    tools:context=".MainActivity">
+    tools:context=".Verification">
 
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintBottom_toTopOf="@+id/card_view"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="8dp"
+
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/logo"
-        tools:ignore="MissingClass"
-
-        >
-
-    </com.airbnb.lottie.LottieAnimationView>
+        app:lottie_rawRes="@raw/otp_logo"
+        tools:ignore="MissingClass" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view"
         android:layout_width="330dp"
         android:layout_height="500dp"
-        android:layout_gravity="center"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="0dp"
         app:cardCornerRadius="45dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.571">
+        app:layout_constraintTop_toBottomOf="@+id/animationView">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -50,7 +47,7 @@
                 android:layout_height="60dp"
                 android:fontFamily="@font/roboto_medium"
                 android:gravity="center"
-                android:text="@string/verify_your_phone_number"
+                android:text="@string/enter_the_otp_code"
                 android:textColor="@color/black"
                 android:textSize="22sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -61,12 +58,12 @@
                 app:layout_constraintVertical_bias="0.217" />
 
             <EditText
-                android:id="@+id/editTextPhone"
+                android:id="@+id/otp_recieve"
                 android:layout_width="250dp"
                 android:layout_height="60dp"
                 android:background="@drawable/back"
                 android:ems="10"
-                android:hint="@string/enter_your_phone_number"
+                android:hint="@string/enter_the_otp_code"
                 android:inputType="phone"
                 android:textAlignment="center"
                 android:textColor="#050505"
@@ -79,7 +76,7 @@
                 app:layout_constraintVertical_bias="0.118" />
 
             <Button
-                android:id="@+id/next_btn"
+                android:id="@+id/verify"
                 android:layout_width="150dp"
                 android:layout_height="60dp"
                 android:backgroundTint="@color/black"
@@ -90,7 +87,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextPhone"
+                app:layout_constraintTop_toBottomOf="@+id/otp_recieve"
                 app:layout_constraintVertical_bias="0.293" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -98,16 +95,4 @@
 
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/cc_logo"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginBottom="143dp"
-        app:layout_constraintBottom_toTopOf="@+id/card_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/logo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
